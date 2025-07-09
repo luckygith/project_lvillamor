@@ -12,3 +12,37 @@
 	z-index: 1000;
 	/* transition: opacity 0.5s ease-in-out; */
 }
+
+.viewer__section {
+	max-width: 500px;
+}
+
+.viewer__section-description {
+	font-family: Doto;
+	font-style: bold;
+	color: aliceblue;
+}
+
+.viewer__section-unfinished::after {
+	display: inline-block;
+	animation: dotty steps(1, end) 2s infinite;
+	content: "";
+}
+
+@keyframes dotty {
+	0% {
+		content: "";
+	}
+	25% {
+		content: ".";
+	}
+	50% {
+		content: "..";
+	}
+	75% {
+		content: "...";
+	}
+	100% {
+		content: "";
+	}
+}

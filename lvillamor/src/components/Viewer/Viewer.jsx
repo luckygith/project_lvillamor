@@ -1,52 +1,54 @@
 import React from "react";
-
+import useModalClose from "../../hooks/modal";
 import "./Viewer.css";
+import About from "../About/AboutModal";
+import Resume from "../Resume/Resume";
+import Project1 from "../Project1/Project1";
+import Project2 from "../Project2/Project2";
+import Project3 from "../Project3/Project3";
+import Project4 from "../Project4/Project4";
 
-function Viewer({ activeModal }) {
+function Viewer({ activeModal, handleCloseModal }) {
+	useModalClose(handleCloseModal);
+
 	return (
 		<div className="viewer">
-			{activeModal === "About" && (
-				<div className="viewer__modal">
-					About Me
-					<div className="About__section">
-						<p className="About__paragraph">sldkfjsldkf</p>
-					</div>
-				</div>
+			{activeModal === "about" && (
+				<About
+					isOpen={activeModal === "about"}
+					onClose={handleCloseModal}
+				/>
 			)}
-			{activeModal === "Resume" && (
-				<div className="viewer__modal">
-					Resume
-					<div className="About__section">
-						<p className="About__paragraph">
-							A coffee shop menu created for online presence for customers to
-							view menu
-						</p>
-					</div>
-				</div>
+			{activeModal === "resume" && (
+				<Resume
+					isOpen={activeModal === "resume"}
+					onClose={handleCloseModal}
+				/>
 			)}
-			{activeModal === "Project1" && (
-				<div className="viewer__modal">
-					Project1
-					<div className="About__section">
-						<p className="About__paragraph">Coffe </p>
-					</div>
-				</div>
+
+			{activeModal === "project1" && (
+				<Project1
+					isOpen={activeModal === "project1"}
+					onClose={handleCloseModal}
+				/>
 			)}
-			{activeModal === "Project2" && (
-				<div className="viewer__modal">
-					Project2
-					<div className="About__section">
-						<p className="About__paragraph">sldkfjsldkf</p>
-					</div>
-				</div>
+			{activeModal === "project2" && (
+				<Project2
+					isOpen={activeModal === "project2"}
+					onClose={handleCloseModal}
+				/>
 			)}
-			{activeModal === "Project3" && (
-				<div className="viewer__modal">
-					Project3
-					<div className="About__section">
-						<p className="About__paragraph">sldkfjsldkf</p>
-					</div>
-				</div>
+			{activeModal === "project3" && (
+				<Project3
+					isOpen={activeModal === "project3"}
+					onClose={handleCloseModal}
+				/>
+			)}
+			{activeModal === "project4" && (
+				<Project4
+					isOpen={activeModal === "project4"}
+					onClose={handleCloseModal}
+				/>
 			)}
 		</div>
 	);
