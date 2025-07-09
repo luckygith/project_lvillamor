@@ -1,0 +1,20 @@
+.navigation {
+	width: 500px;
+}
+.navigation__button-container {
+	display: flex;
+	flex-direction: column;
+	border: none;
+}
+
+.navigation__button-container button {
+	color: white;
+	font-family: "Doto";
+	font-style: bold;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 3rem; /* Optional: makes text more readable */
+	padding: 2rem; /* Optional: add spacing */
+}

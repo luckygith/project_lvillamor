@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "Dosis";
+	font-weight: 700;
+	font-style: bold;
+	src: url(../fonts/Dosis-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Dosis";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/Dosis-Regular.ttf);
+}
+
+@font-face {
+	font-family: "PressStart";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Doto";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/Doto_Rounded-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Doto";
+	font-weight: 700;
+	font-style: bold;
+	src: url(../fonts/Doto-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: "Warnes";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/Warnes-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Fascinate";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/FascinateInline-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Plaster";
+	font-weight: 700;
+	font-style: normal;
+	src: url(../fonts/Plaster-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 700;
+	font-style: light;
+	src: url(../fonts/RalewayDots-Regular.ttf);
+}
