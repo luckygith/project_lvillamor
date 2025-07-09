@@ -15,6 +15,6 @@
 	background: none;
 	outline: none;
 	cursor: pointer;
-	font-size: 3rem; /* Optional: makes text more readable */
+	font-size: 2rem; /* Optional: makes text more readable */
 	padding: 2rem; /* Optional: add spacing */
 }
