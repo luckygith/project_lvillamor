@@ -1,0 +1,14 @@
+.viewer__modal {
+	position: fixed;
+	top: 0;
+	right: 0px;
+	height: 100vh;
+	max-width: 700px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	/* transition: opacity 0.5s ease-in-out; */
+}

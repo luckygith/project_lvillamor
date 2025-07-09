@@ -3,27 +3,31 @@ import "./App.css";
 import Main from "../Main/Main";
 import Viewer from "../Viewer/Viewer";
 
-const [activeModal, setActiveModal] = useState(null);
-
 function App() {
+	const [activeModal, setActiveModal] = useState("");
+
 	const handleAbout = () => {
 		setActiveModal("About");
 		console.log("about");
 	};
 
 	const handleResume = () => {
+		setActiveModal("Resume");
 		console.log("resume");
 	};
 
 	const handleProject1 = () => {
+		setActiveModal("Project1");
 		console.log("project1");
 	};
 
 	const handleProject2 = () => {
+		setActiveModal("Project2");
 		console.log("project2");
 	};
 
 	const handleProject3 = () => {
+		setActiveModal("Project3");
 		console.log("project3");
 	};
 
@@ -37,7 +41,7 @@ function App() {
 					handleProject2={handleProject2}
 					handleProject3={handleProject3}
 				/>
-				<Viewer />
+				<Viewer activeModal={activeModal} />
 			</div>
 		</div>
 	);
