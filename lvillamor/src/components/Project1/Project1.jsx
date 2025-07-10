@@ -7,15 +7,20 @@ const Project1 = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="project1
-            __content">
+			<div
+				className="project1
+            __content"
+			>
 				<div className="project1__description project__description viewer__section-description">
-					My first project demonstration of api fetch request with a simple
-					frontend layout with cards that open up as a modal view.
+					<h1 className="project__title">Around the U.S.</h1>A coffee My first
+					project demonstration of api fetch request with a simple frontend
+					layout with cards that open up as a modal view.
 				</div>
-				<div className="project1
-                __image-container project__image-container">
-					<img
+				<div
+					className="project1
+                __image-container project__image-container"
+				>
+					{/* <img
 						src={}
 						alt=""
 						className="project1
@@ -41,7 +46,7 @@ const Project1 = ({ isOpen, onClose, handleCloseModal }) => {
 						className="project1
                         __mobile project1
                         __image"
-					/>
+					/> */}
 				</div>
 			</div>
 		</MenuModal>

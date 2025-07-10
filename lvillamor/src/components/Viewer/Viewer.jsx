@@ -1,7 +1,7 @@
 import React from "react";
 import useModalClose from "../../hooks/modal";
 import "./Viewer.css";
-import About from "../About/AboutModal";
+import About from "../About/About";
 import Resume from "../Resume/Resume";
 import Project1 from "../Project1/Project1";
 import Project2 from "../Project2/Project2";
@@ -25,7 +25,6 @@ function Viewer({ activeModal, handleCloseModal }) {
 					onClose={handleCloseModal}
 				/>
 			)}
-
 			{activeModal === "project1" && (
 				<Project1
 					isOpen={activeModal === "project1"}

@@ -12,16 +12,24 @@ const Project3 = ({ isOpen, onClose, handleCloseModal }) => {
 		<MenuModal>
 			<div className="project3__content">
 				<div className="project3__description project__description viewer__section-description">
-					My first crack at api fetching collaborating with live feed of online
-					weather api source from WeatherAPI. I used another api fetch feature
-					to a clothingitems database that is created by the user themselves and
-					correlates with the weather to decide what is shown on the screen
-					based on compatibility of weather as registered by the user via
-					initial input. Some included parameters shown are current dates and
-					geolocation. Technologies and techniques used in this project
-					includes: -The basics of React and Redux -How to build React apps with
-					Create React App -Modern React syntax, called hooks -Understanding and
-					correctly using the this keyword -Authorization and authentication
+					<h1 className="project__title">(WTWR)What to Wear for the Weather</h1>
+					<p className="">
+						My first crack at api fetching collaborating with live feed of
+						online weather api source from WeatherAPI.{" "}
+					</p>
+					<p>
+						I used another api fetch feature to a clothingitems database that is
+						created by the user themselves and correlates with the weather to
+						decide what is shown on the screen based on compatibility of weather
+						as registered by the user via initial input. Some included
+						parameters shown are current dates and geolocation.{" "}
+					</p>
+					<p>
+						Technologies and techniques used in this project includes: -The
+						basics of React and Redux -How to build React apps with Create React
+						App -Modern React syntax, called hooks -Understanding and correctly
+						using the this keyword -Authorization and authentication
+					</p>
 				</div>
 				<div className="project3__image-container project__image-container">
 					<img

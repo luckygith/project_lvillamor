@@ -1,20 +1,30 @@
 .viewer__modal {
 	position: fixed;
-	top: 0;
+	/* top: 0; */
 	right: 0px;
-	height: 100vh;
+	max-height: 100vh;
+	height: 100%;
 	max-width: 700px;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 	z-index: 1000;
-	/* transition: opacity 0.5s ease-in-out; */
+	overflow-y: auto;
+	/* transition: opacity 0.5s easse-in-out; */
 }
 
 .viewer__section {
 	max-width: 500px;
+	/* display: flex; */
+	/* align-items: center; */
+
+	overflow-y: auto;
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+	box-sizing: border-box;
 }
 
 .viewer__section-description {
@@ -27,6 +37,21 @@
 	display: inline-block;
 	animation: dotty steps(1, end) 2s infinite;
 	content: "";
+}
+
+.project__image-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.project__description {
+	margin-bottom: 30px;
+}
+
+.project__title {
+	display: flex;
+	justify-content: center;
 }
 
 @keyframes dotty {

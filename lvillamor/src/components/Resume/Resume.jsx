@@ -7,8 +7,10 @@ const Resume = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="resume__description viewer__section-description">
-				<p className="viewer__section-unfinished">Under construction</p>
+			<div className="resume__content">
+				<div className="resume__description viewer__section-description">
+					<p className="viewer__section-unfinished">Under construction</p>
+				</div>
 			</div>
 		</MenuModal>
 	);

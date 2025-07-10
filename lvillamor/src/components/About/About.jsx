@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutModal.css";
+import "./About.css";
 import MenuModal from "../MenuModal/MenuModal";
 import useModalClose from "../../hooks/modal";
 
@@ -10,9 +10,11 @@ const About = ({ isOpen, onClose }) => {
 			isOpen={isOpen}
 			onClose={onClose}
 		>
-			<div className="project3__description viewer__section-description">
-				Follow my journey into creativity and incorporating the things I learn
-				along the way!
+			<div className="about-modal__content">
+				<div className="about__description viewer__section-description">
+					Follow my journey into creativity and incorporating the things I learn
+					along the way!
+				</div>
 			</div>
 		</MenuModal>
 	);
