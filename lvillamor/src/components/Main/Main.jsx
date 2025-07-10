@@ -9,6 +9,7 @@ function Main({
 	handleProject1,
 	handleProject2,
 	handleProject3,
+	handleProject4,
 }) {
 	return (
 		<div className="main">
@@ -20,6 +21,7 @@ function Main({
 					handleProject1={handleProject1}
 					handleProject2={handleProject2}
 					handleProject3={handleProject3}
+					handleProject4={handleProject4}
 				/>
 			</section>
 			<section className="main__viewer">

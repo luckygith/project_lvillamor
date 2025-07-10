@@ -7,13 +7,38 @@ const Project3 = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="project3__description project__description viewer__section-description">
-				My first crack at api fetching collaborating with live feed of online
-				weather api source from WeatherAPI. I used another api fetch feature to
-				a clothingitems database that is created by the user themselves and
-				correlates with the weather to decide what is shown on the screen based
-				on compatibility of weather as registered by the user via initial input.
-				Some included parameters shown are current dates and geolocation.
+			<div className="project3__content">
+				<div className="project3__description project__description viewer__section-description">
+					My first crack at api fetching collaborating with live feed of online
+					weather api source from WeatherAPI. I used another api fetch feature
+					to a clothingitems database that is created by the user themselves and
+					correlates with the weather to decide what is shown on the screen
+					based on compatibility of weather as registered by the user via
+					initial input. Some included parameters shown are current dates and
+					geolocation.
+				</div>
+				<div className="project3__image-container project__image-container">
+					<img
+						src={}
+						alt=""
+						className="project3__image-desktop project3__image"
+					/>
+					<img
+						src=""
+						alt=""
+						className="project3__image__register project3__image"
+					/>
+					<img
+						src=""
+						alt=""
+						className="project__image-tablet project3__image"
+					/>
+					<img
+						src=""
+						alt=""
+						className="project3__mobile project3__image"
+					/>
+				</div>
 			</div>
 		</MenuModal>
 	);

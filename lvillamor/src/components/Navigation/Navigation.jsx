@@ -8,6 +8,7 @@ function Navigation({
 	handleProject1,
 	handleProject2,
 	handleProject3,
+	handleProject4,
 }) {
 	const handleAboutClick = () => {
 		handleAbout();
@@ -27,6 +28,10 @@ function Navigation({
 
 	const handleProject3Click = () => {
 		handleProject3();
+	};
+
+	const handleProject4Click = () => {
+		handleProject4();
 	};
 
 	return (
@@ -62,6 +67,12 @@ function Navigation({
 						onClick={handleProject3Click}
 					>
 						Project 3
+					</button>
+					<button
+						className="navigation__project-4"
+						onClick={handleProject4Click}
+					>
+						Project 4
 					</button>
 				</div>
 			</section>

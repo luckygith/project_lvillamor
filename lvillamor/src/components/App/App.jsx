@@ -5,6 +5,17 @@ import Viewer from "../Viewer/Viewer";
 
 function App() {
 	const [activeModal, setActiveModal] = useState("");
+	const [previousModal, setPreviousModal] = useState("");
+
+	const openModal = (modalName) => {
+		if (activeModal) {
+			setPreviousModal(activeModal); // store the one that’s open
+			setTimeout(() => {
+				setPreviousModal(""); // clear it after fade-out
+			}, 300); // match fade-out duration
+		}
+		setActiveModal(modalName); // open new one immediately
+	};
 
 	const handleCloseModal = () => {
 		setActiveModal("");
