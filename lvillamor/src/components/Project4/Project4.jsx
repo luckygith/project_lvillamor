@@ -11,9 +11,15 @@ const Project4 = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="project4__content">
+			<div className="project4__content project__content">
 				<div className="project4__description  viewer__section-description">
-					<h1 className="project__title">(WTWR)What to Wear for the Weather</h1>
+					<h1 className="project__title">News Explorer</h1>
+					<a
+						className="project__link"
+						href="https://luckygith.github.io/project_newsexplorer_frontend/"
+					>
+						News Explorer Simulation
+					</a>
 					<p>
 						This a project demonstration created during my time with Tripleten
 						bootcamp. It consists of the following features: Javascript, React,
@@ -23,7 +29,9 @@ const Project4 = ({ isOpen, onClose, handleCloseModal }) => {
 						Predeployment will display hardcoded API information to demonstrate
 						successful API backend response simulation.
 					</p>
-					<p>API Source: https://newsapi.org/ </p>
+					<p>
+						API Source: <a href="https://newsapi.org/">https://newsapi.org/ </a>{" "}
+					</p>
 					<p>
 						Redux - use for state specific design for current page identifier
 						and API data object organization for save and delete card function

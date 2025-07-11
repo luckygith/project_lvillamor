@@ -10,10 +10,16 @@ const Project3 = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="project3__content">
+			<div className="project3__content project__content">
 				<div className="project3__description project__description viewer__section-description">
 					<h1 className="project__title">(WTWR)What to Wear for the Weather</h1>
-					<p className="">
+					<a
+						className="project__link"
+						href="https://www.wtwr.bnene.com"
+					>
+						WTWR
+					</a>
+					<p>
 						My first crack at api fetching collaborating with live feed of
 						online weather api source from WeatherAPI.{" "}
 					</p>

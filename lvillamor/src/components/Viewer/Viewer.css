@@ -12,7 +12,7 @@
 	justify-content: center;
 	z-index: 1000;
 	overflow-y: auto;
-	/* transition: opacity 0.5s easse-in-out; */
+	transition: opacity 0.5s easse-in-out;
 }
 
 .viewer__section {
@@ -39,6 +39,9 @@
 	content: "";
 }
 
+.project__content {
+}
+
 .project__image-container {
 	display: flex;
 	flex-direction: column;
@@ -46,10 +49,17 @@
 }
 
 .project__description {
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
 .project__title {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.project__link {
 	display: flex;
 	justify-content: center;
 }

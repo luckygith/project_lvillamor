@@ -1,10 +1,4 @@
-.project__image-container {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
 .project1__image {
-	max-width: 100px;
+	max-width: 500px;
 	height: auto;
 }

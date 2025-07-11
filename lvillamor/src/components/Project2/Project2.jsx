@@ -9,15 +9,23 @@ const Project2 = ({ isOpen, onClose, handleCloseModal }) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
-			<div className="project2__content">
-				<div className="project2__description  project__description viewer__section-description">
-					<h1 className="project__title">Coffee Shop Online Menu</h1>A coffee
-					shop menu created for online presence for customers to view menu. With
-					just a vanilla javascript coding I included simple features with the
-					following: Semantic HTML5 - Flexbox - Positioning - Flat BEM file
-					structure - A custom form - CSS animation and transform. The is
-					continuous single page scrolling website that is also responsive to
-					fit all kinds of screens from desktop to mobile.
+			<div className="project2__content project__content">
+				<div className="project2__description project__description viewer__section-description">
+					<h1 className="project__title">Coffee Shop Online Menu</h1>
+					<a
+						className="project__link"
+						href="https://github.com/luckygith/se_project_coffeeshop.git"
+					>
+						Site on Github
+					</a>
+					<p>
+						A coffee shop menu created for online presence for customers to view
+						menu. With basic vanilla javascript I included simple features with
+						the following: Semantic HTML5 - Flexbox - Positioning - Flat BEM
+						file structure - A custom form - CSS animation and transform. The is
+						continuous single page scrolling website that is also responsive to
+						fit all kinds of screens from desktop to mobile.
+					</p>
 				</div>
 
 				<div className="project2__image-container project__image-container">
