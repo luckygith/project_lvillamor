@@ -7,8 +7,15 @@ import Project1 from "../Project1/Project1";
 import Project2 from "../Project2/Project2";
 import Project3 from "../Project3/Project3";
 import Project4 from "../Project4/Project4";
+import ImagePreviewModal from "../ImagePreviewModal/ImagePreviewModal";
 
-function Viewer({ activeModal, handleCloseModal }) {
+function Viewer({
+	activeModal,
+	handleCloseModal,
+	handleImagePreview,
+	imagePreviewSource,
+	handleCloseImagePreview,
+}) {
 	useModalClose(handleCloseModal);
 
 	return (
@@ -17,6 +24,7 @@ function Viewer({ activeModal, handleCloseModal }) {
 				<About
 					isOpen={activeModal === "about"}
 					onClose={handleCloseModal}
+					handleImagePreview={handleImagePreview}
 				/>
 			)}
 			{activeModal === "resume" && (
@@ -29,6 +37,9 @@ function Viewer({ activeModal, handleCloseModal }) {
 				<Project1
 					isOpen={activeModal === "project1"}
 					onClose={handleCloseModal}
+					handleImagePreview={handleImagePreview}
+					activeModal={activeModal}
+					imagePreviewSource={imagePreviewSource}
 				/>
 			)}
 			{activeModal === "project2" && (

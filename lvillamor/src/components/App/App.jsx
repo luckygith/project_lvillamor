@@ -2,19 +2,33 @@ import { useState } from "react";
 import "./App.css";
 import Main from "../Main/Main";
 import Viewer from "../Viewer/Viewer";
+import ImagePreviewModal from "../ImagePreviewModal/ImagePreviewModal";
 
 function App() {
 	const [activeModal, setActiveModal] = useState("");
-	const [previousModal, setPreviousModal] = useState("");
+	// const [activePreviewModal, setActivePreviewModal] = useState("");
+	const [imagePreviewSource, setImagePreviewSource] = useState("");
 
-	const openModal = (modalName) => {
-		if (activeModal) {
-			setPreviousModal(activeModal); // store the one that’s open
-			setTimeout(() => {
-				setPreviousModal(""); // clear it after fade-out
-			}, 300); // match fade-out duration
-		}
-		setActiveModal(modalName); // open new one immediately
+	// const openModal = (modalName) => {
+	// 	if (activeModal) {
+	// 		setPreviousModal(activeModal); // store the one that’s open
+	// 		setTimeout(() => {
+	// 			setPreviousModal(""); // clear it after fade-out
+	// 		}, 300); // match fade-out duration
+	// 	}
+	// 	setActiveModal(modalName); // open new one immediately
+	// };
+
+	const handleImagePreview = (imageSource) => {
+		console.log("handleImagePreview", imageSource);
+		setImagePreviewSource(imageSource);
+		setActiveModal("image-preview");
+		// setActivePreviewModal("image-preview");
+	};
+
+	const handleCloseImagePreview = () => {
+		console.log("handlecloseimagepreview from APP");
+		setActiveModal("");
 	};
 
 	const handleCloseModal = () => {
@@ -65,8 +79,18 @@ function App() {
 				<Viewer
 					activeModal={activeModal}
 					handleCloseModal={handleCloseModal}
+					handleImagePreview={handleImagePreview}
+					imagePreviewSource={imagePreviewSource}
+					handleCloseImagePreview={handleCloseImagePreview}
 				/>
 			</div>
+			{activeModal === "image-preview" && (
+				<ImagePreviewModal
+					isOpen={true}
+					handleCloseImagePreview={handleCloseImagePreview}
+					imageSource={imagePreviewSource}
+				/>
+			)}
 		</div>
 	);
 }
