@@ -9,6 +9,7 @@ function Navigation({
 	handleProject2,
 	handleProject3,
 	handleProject4,
+	isNavigationVisible,
 }) {
 	const handleAboutClick = () => {
 		handleAbout();
@@ -36,7 +37,11 @@ function Navigation({
 
 	return (
 		<>
-			<section className="navigation">
+			<section
+				className={
+					isNavigationVisible ? "main__navigation--visible" : "main__navigation"
+				}
+			>
 				<div className="navigation__button-container">
 					<button
 						className="navigation__about"

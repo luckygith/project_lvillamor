@@ -7,8 +7,17 @@ import project4registerModal from "../../assets/project4registerModal.png";
 import project4tablet from "../../assets/project4tablet.png";
 import project4mobile from "../../assets/project4mobile.png";
 
-const Project4 = ({ isOpen, onClose, handleCloseModal }) => {
+const Project4 = ({
+	isOpen,
+	onClose,
+	handleCloseModal,
+	handleImagePreview,
+}) => {
 	useModalClose(isOpen, onClose, handleCloseModal);
+
+	const handleImageClick = (imageToPreview) => {
+		handleImagePreview(imageToPreview);
+	};
 	return (
 		<MenuModal>
 			<div className="project4__content project__content">
@@ -68,21 +77,25 @@ const Project4 = ({ isOpen, onClose, handleCloseModal }) => {
 						src={project4mainPage}
 						alt=""
 						className="project4__image-desktop project4__image"
+						onClick={() => handleImageClick(project4mainPage)}
 					/>
 					<img
 						src={project4registerModal}
 						alt=""
 						className="project4__image__register project4__image"
+						onClick={() => handleImageClick(project4registerModal)}
 					/>
 					<img
 						src={project4tablet}
 						alt=""
 						className="project__image-tablet project4__image"
+						onClick={() => handleImageClick(project4tablet)}
 					/>
 					<img
 						src={project4mobile}
 						alt=""
 						className="project4__mobile project4__image"
+						onClick={() => handleImageClick(project4mobile)}
 					/>
 				</div>
 				<div className="project4__footer project__footer">

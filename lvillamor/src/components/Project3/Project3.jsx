@@ -6,7 +6,16 @@ import project3features from "../../assets/project3features.jpg";
 import project3login from "../../assets/project3login.jpg";
 import project3profile from "../../assets/project3profile.jpg";
 
-const Project3 = ({ isOpen, onClose, handleCloseModal }) => {
+const Project3 = ({
+	isOpen,
+	onClose,
+	handleCloseModal,
+	handleImagePreview,
+}) => {
+	const handleImageClick = (imageToPreview) => {
+		handleImagePreview(imageToPreview);
+	};
+
 	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<MenuModal>
@@ -42,24 +51,27 @@ const Project3 = ({ isOpen, onClose, handleCloseModal }) => {
 						src={project3features}
 						alt=""
 						className="project3__image-desktop project3__image"
+						onClick={() => handleImageClick(project3features)}
 					/>
 					<img
 						src={project3login}
 						alt=""
 						className="project3__image__register project3__image"
+						onClick={() => handleImageClick(project3login)}
 					/>
 					<img
 						src={project3profile}
 						alt=""
 						className="project__image-tablet project3__image"
+						onClick={() => handleImageClick(project3profile)}
 					/>
 				</div>
-				<div className="project4__footer project__footer">
+				{/* <div className="project4__footer project__footer">
 					DOMAIN NAME: bnene.com
 					[api.wtwr.bnene.com](https://api.wtwr.bnene.com)
 					[wtwr.bnene.com](https://wtwr.bnene.com)
 					[www.wtwr.bnene.com](https://www.wtwr.bnene.com)
-				</div>
+				</div> */}
 			</div>
 		</MenuModal>
 	);

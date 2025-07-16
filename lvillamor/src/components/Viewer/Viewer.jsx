@@ -14,9 +14,10 @@ function Viewer({
 	handleCloseModal,
 	handleImagePreview,
 	imagePreviewSource,
+	previewActiveModal,
 	handleCloseImagePreview,
 }) {
-	useModalClose(handleCloseModal);
+	useModalClose(activeModal, handleCloseModal);
 
 	return (
 		<div className="viewer">
@@ -36,28 +37,42 @@ function Viewer({
 			{activeModal === "project1" && (
 				<Project1
 					isOpen={activeModal === "project1"}
-					onClose={handleCloseModal}
+					handleCloseModal={handleCloseModal}
 					handleImagePreview={handleImagePreview}
 					activeModal={activeModal}
 					imagePreviewSource={imagePreviewSource}
+					previewActiveModal={previewActiveModal}
+					handleCloseImagePreview={handleCloseImagePreview}
 				/>
 			)}
 			{activeModal === "project2" && (
 				<Project2
 					isOpen={activeModal === "project2"}
-					onClose={handleCloseModal}
+					// onClose={handleCloseModal}
+					handleImagePreview={handleImagePreview}
+					activeModal={activeModal}
+					imagePreviewSource={imagePreviewSource}
+					// previewActiveModal={previewActiveModal}
 				/>
 			)}
 			{activeModal === "project3" && (
 				<Project3
 					isOpen={activeModal === "project3"}
 					onClose={handleCloseModal}
+					handleImagePreview={handleImagePreview}
+					activeModal={activeModal}
+					imagePreviewSource={imagePreviewSource}
+					// previewActiveModal={previewActiveModal}
 				/>
 			)}
 			{activeModal === "project4" && (
 				<Project4
 					isOpen={activeModal === "project4"}
 					onClose={handleCloseModal}
+					handleImagePreview={handleImagePreview}
+					activeModal={activeModal}
+					imagePreviewSource={imagePreviewSource}
+					// previewActiveModal={previewActiveModal}
 				/>
 			)}
 		</div>

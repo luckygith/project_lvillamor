@@ -6,33 +6,26 @@ import ImagePreviewModal from "../ImagePreviewModal/ImagePreviewModal";
 
 function App() {
 	const [activeModal, setActiveModal] = useState("");
-	// const [activePreviewModal, setActivePreviewModal] = useState("");
+	const [previewActiveModal, setPreviewActiveModal] = useState("");
+	const [activePreviewModal, setActivePreviewModal] = useState("");
 	const [imagePreviewSource, setImagePreviewSource] = useState("");
-
-	// const openModal = (modalName) => {
-	// 	if (activeModal) {
-	// 		setPreviousModal(activeModal); // store the one that’s open
-	// 		setTimeout(() => {
-	// 			setPreviousModal(""); // clear it after fade-out
-	// 		}, 300); // match fade-out duration
-	// 	}
-	// 	setActiveModal(modalName); // open new one immediately
-	// };
 
 	const handleImagePreview = (imageSource) => {
 		console.log("handleImagePreview", imageSource);
 		setImagePreviewSource(imageSource);
-		setActiveModal("image-preview");
-		// setActivePreviewModal("image-preview");
+		setPreviewActiveModal("image-preview");
 	};
 
 	const handleCloseImagePreview = () => {
 		console.log("handlecloseimagepreview from APP");
-		setActiveModal("");
+		setImagePreviewSource("");
+		setPreviewActiveModal("");
+		console.log("setPreviewActiveModal though handle close image previewß");
 	};
 
 	const handleCloseModal = () => {
 		setActiveModal("");
+		console.log("setActiveModal through handleclosemodal on app");
 	};
 
 	const handleAbout = () => {
@@ -75,20 +68,23 @@ function App() {
 					handleProject2={handleProject2}
 					handleProject3={handleProject3}
 					handleProject4={handleProject4}
+					activeModal={activeModal}
 				/>
 				<Viewer
+					isOpen={true}
 					activeModal={activeModal}
+					previewActiveModal={previewActiveModal}
 					handleCloseModal={handleCloseModal}
 					handleImagePreview={handleImagePreview}
 					imagePreviewSource={imagePreviewSource}
-					handleCloseImagePreview={handleCloseImagePreview}
 				/>
 			</div>
-			{activeModal === "image-preview" && (
+			{previewActiveModal === "image-preview" && (
 				<ImagePreviewModal
 					isOpen={true}
 					handleCloseImagePreview={handleCloseImagePreview}
 					imageSource={imagePreviewSource}
+					previewActiveModal={previewActiveModal}
 				/>
 			)}
 		</div>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Project1.css";
 import MenuModal from "../MenuModal/MenuModal";
-import useModalClose from "../../hooks/modal";
 import project1main from "../../assets/project1main.png";
 import project1formModals from "../../assets/project1formModals.png";
 import project1features from "../../assets/project1features.png";
@@ -9,17 +8,11 @@ import project1confirmUpdate from "../../assets/project1confirmUpdate.png";
 import project1cardPreviewModal from "../../assets/project1cardPreviewModal.png";
 import projec1mobile from "../../assets/projec1mobile.png";
 
-const Project1 = ({
-	isOpen,
-	onClose,
-	handleCloseModal,
-	handleImagePreview,
-}) => {
+const Project1 = ({ handleImagePreview }) => {
 	const handleImageClick = (imageToPreview) => {
 		handleImagePreview(imageToPreview);
 	};
 
-	useModalClose(isOpen, onClose, handleCloseModal);
 	return (
 		<>
 			<MenuModal>

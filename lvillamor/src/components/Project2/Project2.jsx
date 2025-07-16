@@ -1,12 +1,14 @@
 import React from "react";
 import "./Project2.css";
 import MenuModal from "../MenuModal/MenuModal";
-import useModalClose from "../../hooks/modal";
 import project2mainPage from "../../assets/project2mainPage.png";
 import project2fullPage from "../../assets/project2fullPage.png";
 
-const Project2 = ({ isOpen, onClose, handleCloseModal }) => {
-	useModalClose(isOpen, onClose, handleCloseModal);
+const Project2 = ({ handleImagePreview }) => {
+	const handleImageClick = (imageToPreview) => {
+		handleImagePreview(imageToPreview);
+	};
+
 	return (
 		<MenuModal>
 			<div className="project2__content project__content">
@@ -33,11 +35,13 @@ const Project2 = ({ isOpen, onClose, handleCloseModal }) => {
 						src={project2mainPage}
 						alt=""
 						className="project2__image-main project2__image"
+						onClick={() => handleImageClick(project2mainPage)}
 					/>
 					<img
 						src={project2fullPage}
 						alt=""
 						className="project2__image__full project2__image"
+						onClick={() => handleImageClick(project2fullPage)}
 					/>
 				</div>
 			</div>
